@@ -1,9 +1,10 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <h1>All Intent Filter</h1> </br>
-    <p>Iniciaremos por incluir el código XML en nuestro AndroidManifest</p>
-  </body>
-</html>
+## Intala El XML
+
+Importa en AndroidManifest
+```xml
+<intent-filter android:label="IMG">
+        <action android:name="android.intent.action.SEND" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="image/*" />
+    </intent-filter>
+```
