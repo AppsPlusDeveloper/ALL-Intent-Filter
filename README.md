@@ -1,3 +1,7 @@
+
+## Vista Previa
+<img src="./Preview/preview1.gif" width=300 title="Screen">
+
 ## Intala El XML
 
 Importa en AndroidManifest
