@@ -33,7 +33,8 @@ import java.util.*;
 import java.util.regex.*;
 import org.json.*;
 import android.Manifest;
-import android.content.pm.PackageManager;
+import android.content.pm.PackageManager;
+
 
 public class MainActivity extends Activity {
 	
@@ -182,4 +183,4 @@ public class MainActivity extends Activity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}
