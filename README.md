@@ -40,24 +40,28 @@ private Uri uri;
 
 private Intent in = new Intent();
 
-
 //En el caso de recibir otro tipo de Archivo cambia "image/*"
-   Intent in = getIntent();
-        String Action = in.getAction();
-            String Type = in.getType();
+Intent in = getIntent();
+ String Action = in.getAction();
+ String Type = in.getType();
+
 if (in.ACTION_SEND.equals(Action) && Type != null) {
-	if (Type.startsWith("image/*")) {
-		    Uri uri = (Uri) in.getParcelableExtra(Intent.EXTRA_STREAM);
-	}
-	if (Type.startsWith("text/plain")) {
-		textview1.setText(in.getStringExtra(Intent.EXTRA_TEXT));
-	}
+ if (Type.startsWith("image/*")) {
+Uri uri = (Uri) in.getParcelableExtra(Intent.EXTRA_STREAM);
 }
+
+if (Type.startsWith("text/plain")) {
+textview1.setText(in.getStringExtra(Intent.EXTRA_TEXT));
+}
+
+}
+
 try {
-		if (!getIntent().getDataString().isEmpty()) {
-				textview2.setText(getIntent().getDataString());
-		}
-} catch ( Exception e){
+  if (!getIntent().getDataString().isEmpty()) {
+textview2.setText(getIntent().getDataString());
+}
+
+} catch (Exception e) {
 		      
 }
 ```
@@ -66,10 +70,11 @@ Obten los enlaces abiertos:
 
 ```java
 try {
-		if (!getIntent().getDataString().isEmpty()) {
-				textview2.setText(getIntent().getDataString());
-		}
-} catch ( Exception e){
+ if (!getIntent().getDataString().isEmpty()) {
+textview2.setText(getIntent().getDataString());
+}
+
+} catch (Exception e){
 		      
 }
 ```
